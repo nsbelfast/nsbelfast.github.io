@@ -1,0 +1,9 @@
+body>header {background:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #D0021B), color-stop(100%, #940415));background:-webkit-linear-gradient(top center, #D0021B,#940415);background:-moz-linear-gradient(top center, #D0021B,#940415);background:-o-linear-gradient(top center, #D0021B,#940415);background:linear-gradient(top center, #D0021B,#940415)}
+
+#info-container {margin-top: 30px;}
+#info-container #date, #pub-date, .post-date {font-size: 0.8em; font-weight:light;}
+
+.post {margin: 20px 0;}
+.post-title {font-size: 1.2em;}
+
+a:hover, a:focus {color:#444;}
