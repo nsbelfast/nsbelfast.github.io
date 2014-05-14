@@ -1,0 +1,20 @@
+body>header {
+	background:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #68AEF5), color-stop(100%, #539DF0));
+	background:-webkit-linear-gradient(top center, #68AEF5,#539DF0);
+	background:-moz-linear-gradient(top center, #68AEF5,#539DF0);
+	background:-o-linear-gradient(top center, #68AEF5,#539DF0);
+	background:linear-gradient(top center, #68AEF5,#539DF0)
+}
+
+#info-container {margin-top: 30px;}
+#info-container #date, #pub-date, .post-date {font-size: 0.8em; font-weight:light;}
+
+.post {margin: 20px 0;}
+.post-title {font-size: 1.2em;}
+
+a {
+	color:#68AEF5;
+	text-decoration:none;
+	line-height:inherit
+}
+a:hover, a:focus {color:#940415}
