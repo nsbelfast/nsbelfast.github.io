@@ -1,9 +1,9 @@
 body>header {
-	background:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #68AEF5), color-stop(100%, #539DF0));
-	background:-webkit-linear-gradient(top center, #68AEF5,#539DF0);
-	background:-moz-linear-gradient(top center, #68AEF5,#539DF0);
-	background:-o-linear-gradient(top center, #68AEF5,#539DF0);
-	background:linear-gradient(top center, #68AEF5,#539DF0)
+	background:-webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #68AEF5), color-stop(100%, #1D76D1));
+	background:-webkit-linear-gradient(top center, #68AEF5,#1D76D1);
+	background:-moz-linear-gradient(top center, #68AEF5,#1D76D1);
+	background:-o-linear-gradient(top center, #68AEF5,#1D76D1);
+	background:linear-gradient(top center, #68AEF5,#1D76D1)
 }
 
 #info-container {margin-top: 30px;}
@@ -17,4 +17,4 @@ a {
 	text-decoration:none;
 	line-height:inherit
 }
-a:hover, a:focus {color:#940415}
+a:hover, a:focus {color:#FFEC01}
