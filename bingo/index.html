@@ -1,34 +1,36 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<meta charset="utf-8">
+		<meta name="description" content="A bingo card generator for WWDC 2014" />
 		<title>WWDC Bingo</title>
 		<style type="text/css">
 			body {
-    			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    			font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     			font-weight: 300;
 			}
 
 			table {
 				width: 100%
 			}
-
+		
 			td {
+				padding: 5px;
 				width: 20%;
 				height:75px;
 				border:1px solid #000000;
 				border-width:1px;
 				text-align:center;
 			}
-
+			
 			.hidden {
 				display: none;
 			}
-
+			
 			.on {
 				background-color: #34aadc;
 			}
-
+			
 			#winner {
 				color: #5ad427;
 				font-size: 64px;
@@ -40,7 +42,7 @@
 		var squares = ['We\'re taking it to the next level',
                 'Safari 8',
                 'iWork \'14',
-                'New MBPr',
+                'New rMBP',
                 'Siri kicks off the keynote',
                 'iOS 8',
                 'Jonny Ive describes something as magical',
@@ -56,7 +58,7 @@
                 '4.7" iPhone',
                 '5" iPhone',
                 '13" iPad',
-                'Mac OS X Geese',
+                'Mac OS X Geese (10.10)',
                 'Siri SDK',
                 'Revolutionary',
                 'Beats Demo',
@@ -66,12 +68,44 @@
                 'Eddy Cue\'s shirt is not camera friendly',
                 'Android mentioned',
                 'Infinity Blade',
-                'Eddy Cue\'s shirt not tucked in'];
-
+                'Eddy Cue\'s shirt not tucked in',
+                '64-Bit only Mac App Store',
+                'Mac OS X follows iOS UI styling',
+                'Smart Home',
+                'Retina MacBook Air',
+                'It\'s our best X yet',
+                'Only Apple could do this',
+                'Jimmy Iovine on stage',
+                'Moscone West is the biggest venue we could find',
+                '...and we\'d love to show it to you now',
+                'Angela Ahrendts on stage',
+                'Chamfered',
+                'Solid piece of aluminium',
+                'We\'ve shot a video of the store opening and we\'d love to show it to you now',
+                'The best 8MP camera',
+                '...and it\'s available today',
+                'TestFlight',
+                'Video of the Spaceship Campus',
+                'Video of the manufacturing process',
+                'iWork for Web has had a tremendous reception',
+                'Dre on stage',
+                'LiquidMetal',
+                'Sapphire',
+                'OS X running on Arm64',
+                'It\'s that easy',
+                'It just works',
+                'Phil Schiller reads off a list of specifications',
+                'iOS adoption chart',
+                'Retina Cinema Display'];
+                
 		var col = [0,0,1,0,0];
-
+		
 		var row = [0,0,1,0,0];
-
+		
+		var downDialognal = 1;
+		
+		var upDialognal = 1;
+		
 		//via http://stackoverflow.com/a/12646864/806442
 		function shuffleArray(array) {
 			for (var i = array.length - 1; i > 0; i--) {
@@ -85,59 +119,77 @@
 
 		$(document).ready(function() {
 			shuffleArray(squares);
-
-			$('#square-count').text(squares.length);
-
+			
+			$('#showall').text(squares.length);
+			
 			var card = $('#bingo-card');
 			var count = 0;
-
-			for (var i = 0; i < 5; i++) {
+			
+			for (var i = 0; i < 5; i++) { 
 				var tr = '<tr id="row' + i + '">';
-
+				
 				for (var j = 0; j < 5; j++) {
 					var td = '<td id="i' + count + '">';
-
+    			
     				if ((i == 2) && (j == 2)) {
     					td += 'Free';
     				} else {
     					td += squares[count];
 					}
-
+					
 					count++;
-
+					
 					td += '</td>';
-
+					
     				tr += td;
-
+    				
 				}
-
+				
 				tr += '</tr>';
     			card.append(tr);
 			}
-
+			
 			$('#i12').addClass('on');
-
+		
 			$('td').click(function(){
 				if (!$(this).hasClass('on')) {
 					$(this).addClass('on');
 					var id = $(this).attr('id').substring(1);
-
+				
+					var winner = 0;
+					
 					var currentRow = Math.floor(id / 5);
-
+				
 					row[currentRow]++;
-
-					if (row[currentRow] >= 5) {
-						$('#winner').removeClass('hidden');
-					}
-
+					
 					var currentCol = id % 5;
-
+				
 					col[currentCol]++;
-
-					if (col[currentCol] >= 5) {
-						$('#winner').removeClass('hidden');
+					
+					if (currentRow == currentCol) {
+						downDialognal++;
+					}
+					
+					if ((currentRow + currentCol) == 4) {
+						upDialognal++;
+					}
+					
+					if ((row[currentRow] >= 5)
+						|| (col[currentCol] >= 5)
+						|| (downDialognal >= 5)
+						|| (upDialognal >= 5)){
+						$('#winner').removeClass('hidden');	
 					}
 				}
+			});
+			
+			$('#showall').click(function(){
+				var squarelist = $('#squares');
+				var total = squares.length;
+				
+				for (var i = 0; i < total; i++) { 
+					squarelist.append('<p>' + squares[i] + '</p>');
+				};	
 			});
 		});
 	</script>
@@ -146,19 +198,25 @@
 	<body>
 		<h1>WWDC Bingo</h1>
 		<div id="winner" class="hidden">
-			WINNER!
+			BINGO!
 		</div>
 		<table id="bingo-card">
 
 		</table>
-
+		
 		<h2>How to play</h2>
 		<ul>
 			<li>As you're watching the WWDC keynote, mark off the events listed in your card as they happen.</li>
-			<li>If you're the first person to get 5 in a row horizontally, diagonally or vertically wins.</li>
+			<li>If you're the first person to get 5 in a row horizontally, diagonally or vertically you win.</li>
 			<li>The middle square is free.</li>
-			<li>Reload to get a new card. There are currently <span id="square-count"></span> possible values.</li>
+			<li>Reload to get a new card. There are currently <a id="showall" href="#showall"></a> possible values.</li>
 		</ul>
+		
+		<a name="showall"></a>
+		<div id="squares">
+			
+		</div>
+
 		<p>By <a href="http://www.karlmonaghan.com/">Karl Monaghan</a> &nbsp;|&nbsp;Inspired by by <a href="https://www.cocoacontrols.com/posts/wwdc-2013-bingo">WWDC 2013 Bingo</a>&nbsp;|&nbsp;<a href="http://www.karlmonaghan.com/contact">Get in touch</a>&nbsp;|&nbsp;<a href="https://gist.github.com/kmonaghan/ba869be6f8f65429323f">Code</a></p>
 	</body>
 </html>
