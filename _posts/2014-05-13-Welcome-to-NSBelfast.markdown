@@ -23,7 +23,7 @@ A few questions you may have:
     * [Twitter](https://twitter.com/NSBelfast)
     * <a href='m&#97;i&#108;to&#58;tea&#109;&#64;n&#115;&#37;62e%6C&#102;as%74&#46;&#99;&#111;m'>Email us</a>
     * [GitHub](https://github.com/nsbelfast) - submit a pull request if you have any changes for the site or want to add an article, use issues for problems or chat.
-    
+
 Our first meetup is going to be to watch the live stream (assuming there is one) from the WWDC keynote on June 2nd - [see here for details.](https://getinvited.to/nsbelfast/wwdc-2014-keynote/)
 
 We would love to see as many people as possible there to enjoy the event then have a chat about how to move forward with NSBelfast.
@@ -36,4 +36,4 @@ Thanks for your time and see you all soon :)
 
 ### Sign up below to attend our next event
 
-<script src="https://getinvited.to/js/nsbelfast/wwdc-2014-keynote/" id="script-nsbelfast-wwdc-2014-keynote"></script>
+<script src="https://getinvited.to/js/nsbelfast/july-meetup-too-much-information/" id="script-nsbelfast-july-meetup-too-much-information"></script>
