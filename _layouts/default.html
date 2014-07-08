@@ -50,13 +50,13 @@
       <blockquote class="row">
         <header class="medium-2 columns"><img src="/images/calendar_icon.svg" width="100" height="100"></header>
         <div class="medium-10 columns">
-          <p>Next meetup: July 7th 2014 at 6:00pm</p>
+          <p>Next meetup: August 18th 2014 at 6:00pm</p>
           <footer>
-            &mdash; Venue: ShopKeep POS, 17a Ormeau Avenue (1st Floor)
+            &mdash; Venue: To be decided
             <br />
-            &mdash; Topics: Swift and a WWDC recap
-            <br />
-            &mdash; Sign up using our <a href="https://getinvited.to/nsbelfast/july-meetup-too-much-information/">getinvited.to page</a> or scroll down
+            &mdash; Topics: To be decided
+            <!-- <br />
+            &mdash; Sign up using our <a href="https://getinvited.to/nsbelfast/july-meetup-too-much-information/">getinvited.to page</a> or scroll down -->
           </footer>
         </div>
       </blockquote>
@@ -67,6 +67,43 @@
         <div class="row">
 
             {{ content }}
+
+        </div>
+      </div>
+    </section>
+
+    <section class="main-content">
+      <div class="twelve columns">
+        <div class="row">
+
+          <h2>Latest posts</h2>
+
+            <div class="posts">
+              <ul class="posts-list">
+              {% for post in site.categories.general limit:3  %}
+                <li class="post-link">
+                <a class="post-title" href="{{ post.url }}">
+                  <span class="post-date">{{ post.date | date_to_string }}</span> ::
+                  {{ post.title }}
+                </a>
+                </li>
+              {% endfor %}
+              </ul>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="main-content">
+      <div class="twelve columns">
+        <div class="row">
+
+            <h2>Our Next Event</h2>
+
+            <h3>Sign up below to attend our next event</h3>
+
+            <script src="https://getinvited.to/js/nsbelfast/july-meetup-too-much-information/" id="script-nsbelfast-july-meetup-too-much-information"></script>
 
         </div>
       </div>
