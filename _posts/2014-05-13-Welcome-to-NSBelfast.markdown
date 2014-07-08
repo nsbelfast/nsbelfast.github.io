@@ -31,9 +31,3 @@ We would love to see as many people as possible there to enjoy the event then ha
 Thanks for your time and see you all soon :)
 
 [Andy](https://twitter.com/andygough) / [Baz](http://twitter.com/bazscott) / [Mark](https://twitter.com/marramgrass) / [Mo](https://twitter.com/mauricerkelly) / [Niall](https://twitter.com/imnk) / [Simon](https://twitter.com/hamstarr) / [Wes](https://twitter.com/Wes_53) / [Zack](https://twitter.com/Zzackkly)
-
-## WWDC Keynote Event
-
-### Sign up below to attend our next event
-
-<script src="https://getinvited.to/js/nsbelfast/july-meetup-too-much-information/" id="script-nsbelfast-july-meetup-too-much-information"></script>
