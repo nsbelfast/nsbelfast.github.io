@@ -1,0 +1,14 @@
+---
+layout: post
+title:  "WWDC 2015 Keynote"
+date:   2015-05-26 15:00:00
+categories: general
+---
+
+It's hard to believe that its almost been a year since the first meetup of NSBelfast. We have been remiss in arranging a meetup lately, there have been various plans in the works but for a variety of reasons nothing has materialised until now. We are going to reboot and kick things off again with the highlight event of the Apple developer community calendar, the WWDC Keynote.
+
+This year we will again be live streaming the Keynote as it happens. If you would like to join us on June 8th at Shopkeep, Belfast [signup now.](https://getinvited.to/nsbelfast/wwdc-2015-keynote/)
+
+Last years event was full of surprises including 3rd party keyboards on iOS, app extensions, iCloud Drive and the shock introduction of Swift, it was great to be around fellow developers to share our thoughts and reactions.
+
+We would love to see as many people as possible there to enjoy the event so please [signup now.](https://getinvited.to/nsbelfast/wwdc-2015-keynote/)
